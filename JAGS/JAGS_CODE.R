@@ -4,9 +4,9 @@
 library(R2jags)
 
 ############### Data
-data <-read.csv("https://goo.gl/gvFSH8",header=T)
+data <-read.csv("https://goo.gl/ppMoSl",header=T)
 
-X          <- model.matrix( ~  logM200 + r_r200, data = data) # Predictors
+X          <- model.matrix( ~ logM200 + r_r200, data = data) # Predictors
 K          <- ncol(X)                   # Number of Predictors including the intercept 
 y          <- data$bpt # Response variable (0/1)
 n          <- length(y)                 # Sample size
